@@ -3,6 +3,7 @@ using UnityEngine;
 public class Movment : MonoBehaviour
 {
     public float speed = 10f;
+    public float turnSpeed = 10f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -14,6 +15,7 @@ public class Movment : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.forward * Time.deltaTime * speed);
+        transform.Translate(Vector3.right * Time.deltaTime * turnSpeed);
 
     }
 }
